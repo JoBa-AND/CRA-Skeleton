@@ -18,6 +18,10 @@
       "prettier --write"
     ]
   },
+  "validate-branch-name": {
+    "pattern": "^(develop|main|release|((feature|task|bugfix|hotfix)\/[A-Z]+-[0-9]+_[A-Z]+_.+))$",
+    "errorMsg": "your own error message"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^11.2.7",
@@ -59,9 +63,9 @@
     ]
   },
   "devDependencies": {
-    "@storybook/react": "^6.3.12",
     "@storybook/addon-actions": "^6.3.12",
     "@storybook/addon-links": "^6.3.12",
+    "@storybook/react": "^6.3.12",
     "@typescript-eslint/eslint-plugin": "^5.3.1",
     "@typescript-eslint/parser": "^5.3.1",
     "eslint": "^7.32.0",
