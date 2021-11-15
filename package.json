@@ -20,7 +20,7 @@
   },
   "validate-branch-name": {
     "pattern": "^(develop|main|release|((feature|task|bugfix|hotfix)\/[A-Z]+-[0-9]+_[A-Z]+_.+))$",
-    "errorMsg": "your own error message"
+    "errorMsg": "Branch name is invalid - needs to follow pattern. [ADD LINK]"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.15.0",
