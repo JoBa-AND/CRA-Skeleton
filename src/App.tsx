@@ -1,7 +1,7 @@
-import React from 'react'
-import './App.css'
+import React from "react";
+import "./App.css";
 
-function App () {
+function App(): JSX.Element {
   return (
     <div className="app">
       <header className="app-header">
@@ -10,7 +10,7 @@ function App () {
       <p className="app-body">Body</p>
       <footer className="app-footer">Footer</footer>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
