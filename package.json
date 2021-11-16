@@ -25,7 +25,7 @@
     ]
   },
   "validate-branch-name": {
-    "pattern": "^(develop|main|release|((feature|task|bugfix|hotfix)/[A-Z]+-[0-9]+_[A-Z]+_.+))$",
+    "pattern": "^(develop|main|release|((feature|task|bugfix|hotfix)/[A-Z]+-[0-9]+-[A-Z]))$",
     "errorMsg": "Branch name is invalid - needs to follow pattern. [ADD LINK]"
   },
   "dependencies": {
