@@ -15,7 +15,8 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
-      "prettier --write"
+      "prettier --write",
+      "npm run lint:fix"
     ]
   },
   "validate-branch-name": {
