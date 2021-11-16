@@ -19,7 +19,7 @@
     ]
   },
   "validate-branch-name": {
-    "pattern": "^(develop|main|release|((feature|task|bugfix|hotfix)\/[A-Z]+-[0-9]+_[A-Z]+_.+))$",
+    "pattern": "^(develop|main|release|((feature|task|bugfix|hotfix)/[A-Z]+-[0-9]+_[A-Z]+_.+))$",
     "errorMsg": "Branch name is invalid - needs to follow pattern. [ADD LINK]"
   },
   "dependencies": {
@@ -50,6 +50,26 @@
     "workbox-strategies": "^5.1.4",
     "workbox-streams": "^5.1.4"
   },
+  "devDependencies": {
+    "@storybook/addon-actions": "^6.3.12",
+    "@storybook/addon-links": "^6.3.12",
+    "@storybook/react": "^6.3.12",
+    "@typescript-eslint/eslint-plugin": "^5.3.1",
+    "@typescript-eslint/parser": "^5.3.1",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-config-standard-with-typescript": "^21.0.1",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^5.1.1",
+    "eslint-plugin-react": "^7.27.0",
+    "eslint-plugin-unicorn": "^38.0.1",
+    "storybook": "^6.3.12",
+    "typescript": "^4.4.4",
+    "validate-branch-name": "^1.0.6"
+  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -61,22 +81,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@storybook/addon-actions": "^6.3.12",
-    "@storybook/addon-links": "^6.3.12",
-    "@storybook/react": "^6.3.12",
-    "@typescript-eslint/eslint-plugin": "^5.3.1",
-    "@typescript-eslint/parser": "^5.3.1",
-    "eslint": "^7.32.0",
-    "eslint-config-standard": "^16.0.3",
-    "eslint-config-standard-with-typescript": "^21.0.1",
-    "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^5.1.1",
-    "eslint-plugin-react": "^7.27.0",
-    "storybook": "^6.3.12",
-    "typescript": "^4.4.4",
-    "validate-branch-name": "^1.0.6"
   }
 }

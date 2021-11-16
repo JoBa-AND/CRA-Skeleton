@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/prefer-module */
 import React from 'react'
 
 import { storiesOf } from '@storybook/react'
