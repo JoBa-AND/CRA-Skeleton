@@ -7,16 +7,21 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint ./src --ext js,ts,tsx",
-    "lint:fix": "eslint ./src --ext js,ts,tsx --fix",
+    "lint:ts": "eslint ./src --ext js,ts,tsx",
+    "lint:ts:fix": "eslint ./src --ext js,ts,tsx --fix",
+    "lint:scss": "stylelint --config=.stylelintrc 'src/**/*.scss'",
+    "lint:scss:fix": "stylelint --config=.stylelintrc 'src/**/*.scss' --fix",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
     "prepare": "husky install"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
-      "prettier --write",
-      "npm run lint:fix"
+    "src/**/*.{js,jsx,ts,tsx,json}": [
+      "prettier --config .prettierrc --write",
+      "npm run lint:ts:fix"
+    ],
+    "src/**/*.{scss,css}": [
+      "stylelint --config=.stylelintrc --fix"
     ]
   },
   "validate-branch-name": {
@@ -24,6 +29,7 @@
     "errorMsg": "Branch name is invalid - needs to follow pattern. [ADD LINK]"
   },
   "dependencies": {
+    "@apollo/react-hooks": "^4.0.0",
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
@@ -31,6 +37,8 @@
     "@types/node": "^12.20.37",
     "@types/react": "^16.14.20",
     "@types/react-dom": "^16.9.14",
+    "apollo-boost": "^0.4.9",
+    "graphql": "^15.7.2",
     "husky": "^7.0.4",
     "lint-staged": "^12.0.2",
     "prettier": "^2.4.1",
@@ -67,9 +75,18 @@
     "eslint-plugin-promise": "^5.1.1",
     "eslint-plugin-react": "^7.27.0",
     "eslint-plugin-unicorn": "^38.0.1",
+    "postcss": "^8.3.11",
+    "postcss-scss": "^4.0.2",
+    "sass": "^1.43.4",
     "storybook": "^6.3.12",
+    "stylelint": "^14.1.0",
+    "stylelint-config-standard-scss": "^2.0.1",
+    "stylelint-scss": "^4.0.0",
     "typescript": "^4.4.4",
     "validate-branch-name": "^1.0.6"
+  },
+  "resolutions": {
+    "postcss": "^8"
   },
   "browserslist": {
     "production": [

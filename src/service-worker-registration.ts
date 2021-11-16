@@ -25,7 +25,7 @@ interface Config {
   onUpdate?: (registration: ServiceWorkerRegistration) => void
 }
 
-export function register(config?: Config): void {
+export function register (config?: Config): void {
   if (
     process.env.NODE_ENV === 'production' &&
     'serviceWorker' in navigator
@@ -65,7 +65,7 @@ export function register(config?: Config): void {
   }
 }
 
-function registerValidSW(swUrl: string, config?: Config): void {
+function registerValidSW (swUrl: string, config?: Config): void {
   navigator.serviceWorker
     .register(swUrl)
     .then((registration) => {
@@ -112,7 +112,7 @@ function registerValidSW(swUrl: string, config?: Config): void {
     })
 }
 
-function checkValidServiceWorker(
+function checkValidServiceWorker (
   swUrl: string,
   config?: Config
 ): void {
@@ -146,7 +146,7 @@ function checkValidServiceWorker(
     })
 }
 
-export function unregister(): void {
+export function unregister (): void {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.ready
       .then((registration) => {

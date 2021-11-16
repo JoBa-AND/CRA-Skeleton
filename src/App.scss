@@ -1,0 +1,44 @@
+@use "sass:color";
+
+$bg-color: #e3e5e5;
+
+// these two mixins are examples of usage - get-height doesn't need to exist
+@mixin app-layout {
+  background-color: $bg-color;
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+@mixin get-height($screenPercentage) {
+  min-height: $screenPercentage + vh;
+}
+
+.app {
+  text-align: center;
+  background-color: white;
+}
+
+.app-header {
+  @include app-layout;
+  @include get-height(15);
+}
+
+.app-body {
+  @include app-layout;
+  @include get-height(70);
+
+  background-color: color.adjust($bg-color, $lightness: 4%);
+}
+
+.app-footer {
+  @include app-layout;
+  @include get-height(15);
+
+  min-height: 15;
+  background-color: color.adjust($bg-color, $lightness: 8%);
+}

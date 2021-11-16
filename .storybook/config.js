@@ -5,3 +5,15 @@ function loadStories() {
 }
 
 configure(loadStories, module)
+
+export default {
+  typescript: {
+    reactDocgen: 'react-docgen-typescript',
+    reactDocgenTypescriptOptions: {
+      compilerOptions: {
+        allowSyntheticDefaultImports: false,
+        esModuleInterop: false,
+      },
+    }
+  }
+}
