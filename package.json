@@ -16,6 +16,9 @@
     "prepare": "husky install"
   },
   "lint-staged": {
+    "src/**/*.{md}": [
+      "prettier --config .prettierrc --write"
+    ],
     "src/**/*.{js,jsx,ts,tsx,json}": [
       "prettier --config .prettierrc --write",
       "npm run lint:ts:fix"
